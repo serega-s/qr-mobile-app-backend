@@ -2,15 +2,10 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils import timezone
 
-# Admin Login Data
-# email: admin@admin.com
-# password: Xk8Q{9N2~)HF
-
 User = get_user_model()
 
 
 class Event(models.Model):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Заказчик мероприятия')
     customer = models.CharField(
         verbose_name='Заказчик мероприятия', max_length=255)
     description = models.TextField(verbose_name='Описание мероприятия')
