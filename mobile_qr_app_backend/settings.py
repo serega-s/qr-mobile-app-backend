@@ -38,16 +38,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
     ),
-    # 'DEFAULT_PERMISSION_CLASSES': [
-    #     'rest_framework.permissions.IsAuthenticated',
-    # ],
     'DATETIME_FORMAT': "%d/%m/%Y %H:%M",
 }
 DJOSER = {
     'SERIALIZERS': {
         'current_user': 'user.serializers.UserSerializer',
-        # 'user': 'core.serializers.UserSerializer',
-        # "user_create": 'ecommerce.serializers.UserCreateSerializer',
     },
     'SET_PASSWORD_RETYPE': True
 }

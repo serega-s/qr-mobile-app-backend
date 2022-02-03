@@ -18,7 +18,7 @@ def get_events(request):
 
 
 @api_view(['GET'])
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def get_event(request, event_id):
     event = Event.objects.get(id=event_id)
     serializer = EventSerializer(event)
@@ -27,7 +27,7 @@ def get_event(request, event_id):
 
 
 @api_view(['POST'])
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def get_ticket(request, event_id):
     response = {}
     response['status'] = 'Красный'
